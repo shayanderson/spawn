@@ -36,4 +36,28 @@ catch(\Exception $ex)
 Run example.php script using command line (PHP CLI):
 ```shell
 # php example.php
+Executing command: php -r "sleep(1); echo 'process 1';"
+Executing command: php -r "sleep(2); echo 'process 2';"
+Executing command: php -r "sleep(3); echo 'process 3';"
+process 1
+Done: php -r "sleep(1); echo 'process 1';"
+Executing command: php -r "sleep(4); echo 'process 4';"
+process 2
+Done: php -r "sleep(2); echo 'process 2';"
+Executing command: php -r "sleep(5); echo 'process 5';"
+process 3
+Done: php -r "sleep(3); echo 'process 3';"
+process 4
+Done: php -r "sleep(4); echo 'process 4';"
+process 5
+Done: php -r "sleep(5); echo 'process 5';"
+```
+
+## Spawn Settings
+Settings can be customized for script optimization
+
+### Debug Mode
+Debug mode can be turned on to display helpful debugging messages:
+```php
+$spawn->debug_mode = true;
 ```
