@@ -61,3 +61,27 @@ Debug mode can be turned on to display helpful debugging messages:
 ```php
 $spawn->debug_mode = true;
 ```
+
+### Error Log
+An error log path can be set to output any process errors to a log, if not set errors will be directly outputted
+```php
+$spawn->error_log_path = './errors.log';
+```
+
+### Maximum Concurrent Processes
+The number of concurrent process can be limited using the property below:
+```php
+$spawn->max_processes = 3;
+```
+
+### Step Sleep Time
+The step sleep time can be adjusted in milliseconds using the property below, a minimum of 100 milliseconds is required:
+```php
+$spawn->sleep_milliseconds = 500;
+```
+
+### Verbose Option
+The verbose option allows for process output messages, setting false will suppress process messages and errors
+```php
+$spawn->verbose = true;
+```
